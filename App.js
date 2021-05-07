@@ -1,81 +1,247 @@
-
-import './index.css';
-import React from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
+import './style.css';
 
 
-function App() {
+
+function app() {
+  const openMenu = () =>{
+    document.querySelector(".sidebar").classList.add("open");
+  }
+  const closeMenu =() => {
+    document.querySelector(".sidebar").classList.remove("open")
+  }
   return (
-<>
-    <div>
-      <div className="navbar"></div>
-     
-      <div className="links">
-        <Link to = "/products.js"> Products </Link>
-
-        <a href= "/about.html"> About Us </a>
-        <a href= "/login.html"> Login </a>
-        <a className="active" href="/homepage.html">Home</a>
+    <div className="grid-container">
+    <header className="header">
+      <div className="brand">
+        <button onClick={openMenu}>
+          &#9776;
+        </button>
+        <a href="index.html">Radient Technologies</a>
       </div>
-    </div>
-
-    <div classname="images"></div>
-    <div id="para" style={{float: 'font-family:palatino;'}}>Best Quality Product</div>
-    <img src ='/images/1.jpg' alt="" width="700" height="800"/>
-
-    <div id="para1">
-		  <p>Directions</p>
-	  </div>
-    <div classname="QMbmRe" style={{float: "background-image:url('https://maps.googleapis.com/maps/api/staticmap?scale=1&amp;size=1600x900&amp;style=feature:poi.business|visibility:off&amp;style=feature:water|visibility:simplified&amp;style=feature:road|element:labels.icon|visibility:off&amp;style=feature:road.highway|element:labels|saturation:-90|lightness:25&amp;format=jpg&amp;language=en-GB&amp;region=IN&amp;markers=color:0xd07ea7|13.9387917,75.5721107&amp;zoom=16&amp;client=google-presto&amp;signature=f9vEdknSt3L6-IRRruX3IFkKQW4')"}} title="Map showing business location.">
-    </div>
-    <div classname="slideshow container">
-      <div classname="mySlides fade">
-        <div classname="numbertext">1 / 3</div>
-        <img src='/images/1.jpg' style={{float: "width:100%"}} alt="" width="400" height="400" ></img>
+      <div className="header-links">
+        <a href="cart.html">Cart</a>
+        <a href="signin.html">Sign In</a>
       </div>
-    </div>
-    <div classname="mySlides fade">
-        <div classname="numbertext">2 / 3</div>
-        <img src='/images/1.jpg' style={{float: "width:100%"}} alt="" width="400" height="400"></img>
-      </div>
-      <div classname="mySlides fade">
-        <div classname="numbertext">3 / 3</div>
-        <img src='/images/1.jpg' style={{float: "width:100%"}} alt="" width="400" height="400" ></img>
-      </div>
-    <div>
-      <button onclick="plusSlides(-1)">&#10094;</button>
-      <button onclick="plusSlides(1)">&#10095;</button>
-    </div>
-   
-    <div style={{float: "text-align:center"}}>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+    </header>
+    <aside className="sidebar">
+      <h3>Shopping Categories</h3>
+      <button className="sidebar-close-button" onClick={closeMenu}>x</button>
+      <ul>
+        <li>
+          <a href="index.html">Pants</a>
+        </li>
 
+        <li>
+          <a href="index.html">Shirts</a>
+        </li>
 
+      </ul>
+    </aside>
+    <main className="main">
+      <div className="content">
+        <ul className="products">
+          <li>
+            <div className="product">
+              <img className="product-image" src="images/dishwash250ml.jpg" alt="dishwash" />
+              <div className="product-name">
+                <a href="product.html">DISH WASH 250 ML</a>
+              </div>
+              <div className="product-price">35₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+          </li>
+          <li>
+            <div className="product">
+              <img className="product-image" src="images/DISH-WASH-500ML-SIDE.jpg" alt="Dish wash" />
+              <div className="product-name">
+                <a href="product.html">DISH WASH 500 ML</a>
+              </div>
+              <div className="product-price">70₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+          </li>
+          
 
- 
-    
+          <div className="product">
+              <img className="product-image" src="images/FLOOR-CLEANER-Champa-NEW.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER CHAMPA 1 LTR</a>
+              </div>
+              <div className="product-price">35₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
 
+            <div className="product">
+              <img className="product-image" src="images/FLOOR-CLEANER-CHAMPA-01-1.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER CHAMPA 5 LTR</a>
+              </div>
+              <div className="product-price">175₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
 
+            <div className="product">
+              <img className="product-image" src="images/FLOOR-CLEANER-Jasmin-NEW.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER JASMINE 1 LTR</a>
+              </div>
+              <div className="product-price">35₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
 
+            <div className="product">
+              <img className="product-image" src="images/FLOOR-CLEANER-JASMINE-01.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER JASMINE 5 LTR</a>
+              </div>
+              <div className="product-price">175₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
 
- </>       
-    
+            <div className="product">
+              <img className="product-image" src="images/Floor-Cleaner-Lemon-1.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER LEMON 1 LTR</a>
+              </div>
+              <div className="product-price">35₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
 
-         
-      
-    
-   
+            <div className="product">
+              <img className="product-image" src="images/FLOOR-CLEANER-lemeon-01.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER LEMON 5 LTR</a>
+              </div>
+              <div className="product-price">175₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+
+            <div className="product">
+              <img className="product-image" src="images/FLOOR-CLEANER-Nilgiri-new-1.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER NILGIRI 1 LTR</a>
+              </div>
+              <div className="product-price">35₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+
+            <div className="product">
+              <img className="product-image" src="images/FLOOR-CLEANER-NILGIRI-2.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER NILGIRI 5 LTR</a>
+              </div>
+              <div className="product-price">175₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+
+            <div className="product">
+              <img className="product-image" src="images/FLOOR-CLEANER-Sandal-1Ltr-NEW-768x768.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER SANDAL 1LTR</a>
+              </div>
+              <div className="product-price">35₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
         
-  
-  
-      
-  
+            <div className="product">
+              <img className="product-image" src="images/FLOOR-CLEANER-SANDAL-2.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER SANDAL 5 LTR</a>
+              </div>
+              <div className="product-price">175₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+        
+        
+            <div className="product">
+              <img className="product-image" src="images/Floor-Cleaner-Orginal-Black.jpg" alt="Floor cleaner" />
+              <div className="product-name">
+                <a href="product.html">FLOOR CLEANER ORIGINAL BLACK 1LTR</a>
+              </div>
+              <div className="product-price">35₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+        
+        
+            <div className="product">
+              <img className="product-image" src="images/HAND-SANITIZER-1Ltr.jpg" alt="Hand sanitizer" />
+              <div className="product-name">
+                <a href="product.html">HAND SANITIZER 1 LTR</a>
+              </div>
+              <div className="product-price">399₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+        
+        
+            <div className="product">
+              <img className="product-image" src="images/HAND-SANITIZER-100ml-01-1.jpg" alt="Hand sanitizer" />
+              <div className="product-name">
+                <a href="product.html">HAND SANITIZER 100 ML</a>
+              </div>
+              <div className="product-price">35₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+        
+        
+            <div className="product">
+              <img className="product-image" src="images/HAND-SANITIZER-500ml.jpg" alt="Hand sanitizer" />
+              <div className="product-name">
+                <a href="product.html">HAND SANITIZER 500 ML</a>
+              </div>
+              <div className="product-price">199₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+        
+        
+            <div className="product">
+              <img className="product-image" src="images/HAND-SANITIZER-5ltr-NEW.jpg" alt="Hand sanitizer" />
+              <div className="product-name">
+                <a href="product.html">HAND SANITIZER 5 L</a>
+              </div>
+              <div className="product-price">950₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+        
+        
+            <div className="product">
+              <img className="product-image" src="images/HANDWASH GREENAPPLE.jpg" alt="Hand wash" />
+              <div className="product-name">
+                <a href="product.html">HANDWASH GREENAPPLE 250 ML</a>
+              </div>
+              <div className="product-price">35₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+        
+        
+            <div className="product">
+              <img className="product-image" src="images/Toilet-Cleaner.jpg" alt="Toilet cleaner" />
+              <div className="product-name">
+                <a href="product.html">TOILET CLEANER 500 ML</a>
+              </div>
+              <div className="product-price">39₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+        
+        
+            <div className="product">
+              <img className="product-image" src="images/Soap-Oil-5ltr-01-300x300.jpg" alt="Soap oil" />
+              <div className="product-name">
+                <a href="product.html">SOAP OIL 5 LTR</a>
+              </div>
+              <div className="product-price">149₹</div>
+              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+            </div>
+        
 
-  )
+       </ul>
+      </div>
+
+    </main>
+    <footer className="footer">
+      All right reserved.
+    </footer>
+  </div>
+  );
 }
 
-
-export default App;
+export default app;
