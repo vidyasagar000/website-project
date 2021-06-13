@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif, Apple Chancery, cursive, Perpertua;
+    background-color: white;
+    background-size: cover;
+}
+
+#logo {
+    float: left;
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    overflow: visible;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 30px;
+    margin-top: 5px;
+    height: 8vh;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    color: darkgoldenrod;
+    border-radius: 30px 0px 30px 0px;
+}
+
+.navbar .search-container {
+    float: right;
+}
+
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 30px;
+}
+
+.navbar .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-left: 2px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.navbar .search-container button:hover {
+    background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar .search-container {
+        float: none;
+    }
+    .navbar a,
+    .navbar input[type=text],
+    .navbar .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 50%;
+        margin: 0;
+        padding: 14px;
+    }
+    .navbar input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+.image {
+    margin: 30px 20px 20px 0px;
+    background-color: whitesmoke;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 480px;
+}
+
+#para {
+    overflow: hidden;
+    text-align: left;
+    float: right;
+    padding-left: 0px;
+    padding-top: 130px;
+    padding-bottom: 40px;
+    width: 50%;
+    color: black;
+}
+
+#confuse {
+    float: left;
+    padding-right: 30px;
+    padding-left: 50px;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    width: 40%;
+    height: 110%;
+}
+
+.button {
+    margin-top: 10px;
+    margin-bottom: auto;
+    color: black;
+    background-color: whitesmoke;
+}
+
+span {
+    font-size: 20px;
+}
+
+#para1 {
+    text-align: center;
+    width: 100%;
+    display: absolute;
+    margin-top: 70px;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif, Apple Chancery, cursive, Perpertua;
+    font-size: 30px;
+    color: #000000;
+    border-radius: 50px 0px 50px 0px;
+    background-color: white;
+}
+
+element.style {
+    background-image: url(https://maps.googleapis.com/maps/api/staticmap?scale=1&size=1600x900&style=feature:poi.business|visibility:off&style=feature:water|visibility:simplified&style=feature:road|element:labels.icon|visibility:off&style=feature:road.highway|element:labels|saturation:-90|lightness:25&format=jpg&language=en-GB&region=IN&markers=color:0xd07ea7|13.9387917,75.5721107&zoom=16&client=google-presto&signature=f9vEdknSt3L6-IRRruX3IFkKQW4);
+}
+
+#map {
+    position: center center;
+    size: 50%;
+    background-repeat: no-repeat;
+    padding-top: 26%;
+    box-sizing: border-box;
+}
+
+.footer {
+    display: block;
+}
+
+.footer-width-fixer {
+    width: 100%;
+}
+
+.elementor {
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+}
+
+.elementor-2530 .elementor-element.elementor-element-540b9e9:not(.elementor-motion-effects-element-type-background),
+.elementor-2530 .elementor-element.elementor-element-540b9e9>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+    background-color: #001524;
+}
+
+@media (max-width: 767px) {
+    .elementor-2530 .elementor-element.elementor-element-540b9e9 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 40px 20px 65px 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .elementor-2530 .elementor-element.elementor-element-540b9e9 {
+        margin-top: 0px;
+        margin-bottom: -95px;
+        padding: 40px 30px 50px 30px;
+    }
+}
+
+.elementor-2530 .elementor-element.elementor-element-540b9e9 {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 50px 0px 50px 0px;
+}
+
+.elementor-section {
+    position: relative;
+}
+
+.elementor *,
+.elementor :after,
+.elementor :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+*,
+ :after,
+ :before {
+    box-sizing: inherit;
+}
+
+section {
+    display: block;
+}
+
+.elementor *,
+.elementor :after,
+.elementor :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.elementor-2530 .elementor-element.elementor-element-8641193:not(.elementor-motion-effects-element-type-background),
+.elementor-2530 .elementor-element.elementor-element-8641193>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+    background-color: #001524;
+}
+
+.elementor-2530 .elementor-element.elementor-element-8641193 {
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: #3d3d3d;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 2.6em 0em 2.6em 0em;
+}
+
+.elementor-section {
+    position: relative;
+}
+
+.elementor-section .elementor-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+user agent stylesheet div {
+    display: contents;
+}
+
+* {
+    box-sizing: border-box
+}
