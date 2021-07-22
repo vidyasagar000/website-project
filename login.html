@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta name="-sign-in-client id">
+<title>Login/Sign-up</title>
+<link rel="stylesheet" href="login.css">
+
+
+
+</head>
+
+<body>
+<img src="logo.png" id="logo">
+    <div class="navbar">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a class="active" href="login.html ">Login/SignIn</a>
+        <a href="products.html">Products</a> 
+        <a href="homepage.html">Home</a>
+
+    </div>
+<div class="login-box">
+<div class="form">
+<div class="button-box">
+<div id="btn"></div>
+<button type="button" class="toggle-btn" onclick="login()">Login</button>
+<button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+</div>
+
+<form id="login" class="main"  method="POST" onsubmit= "return validate1()" action="products.html">
+<input id="name" type="text" class="input-field" placeholder="Username" required>
+<input id="password" type="password" class="input-field" placeholder="Enter Password" required>
+<input type="checkbox" class="checkbox"> <span>Remember Password</span>
+<button type="submit" class="submit-btn">Log in</button>
+</form>
+
+
+<form id="signup" class="main" method="POST"  onsubmit= "return validate2()" action="products.html"  >
+<input id="namee" type="text" class="input-field" placeholder="Username" required>	
+<input id="email" type="email" class="input-field" placeholder="xxxyyy@gmail.com" required>
+<input id="passwordd" type="password" class="input-field" placeholder="Password" required>
+<button type="submit" class="submit-btn">Sign up</button>
+
+</form>
+
+</div>
+</div>
+
+
+
+<script>
+var x = document.getElementById("login");
+var y = document.getElementById("signup");
+var z = document.getElementById("btn");
+
+function signup(){
+x.style.left="-400px";
+y.style.left="50px";
+z.style.left="110px";
+}
+function login(){
+x.style.left="50px";
+y.style.left="450px";
+z.style.left="0";
+}
+function validate1(){
+var name = document.getElementById("name").value;
+var password = document.getElementById("password").value;
+
+ 	if(name.length < 3)
+	{
+		alert("Enter Valid Name");
+		return false;
+
+    }
+	var reg=/^[0-9]+$/;
+	if (reg.test(namee)!=true)
+	{
+		alert("Enter Valid Name");
+	}
+	var reg=/^[A-Za-z-_''. ]+$/;
+	if(reg.test(name)==false)
+	{
+		alert("Enter Valid Name");
+	}
+	
+	
+ 	if(password.length < 7)
+	{
+		alert("Enter Password Length Greater than 7");
+		return false;
+
+  	}
+alert("Details entered successfully!");
+return true;
+
+	
+}
+
+function validate2(){
+var namee = document.getElementById("namee").value;
+var email = document.getElementById("email").value;
+var passwordd = document.getElementById("passwordd").value;
+
+
+if(namee.length < 3)
+	{
+		alert("Enter Valid Name");
+		return false;
+
+    }
+	var reg=/^[0-9]+$/;
+	if (reg.test(namee)==true)
+	{
+		alert("Enter Valid Name");
+	}
+	var reg=/^[A-Za-z-_''. ]+$/;
+	if(reg.test(namee)==false)
+	{
+		alert("Enter Valid Name");
+	}
+	
+ if(passwordd.length < 7)
+	{
+		alert("Enter Password Length Greater than 7");
+		return false;
+
+    }
+
+
+ if(email.indexOf("@") == -1 || email.length < 6)
+    {
+    alert("Enter Valid Email");
+	return false;
+    }
+	var mailformat = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+	if(mailformat.test(email)==false)
+	{
+		alert("Enter Valid Email");
+
+    }
+alert("Details entered successfully!");
+return true;
+	}
+	
+</script>
+</div>
+
+
+</body>
+</html>
